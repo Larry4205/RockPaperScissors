@@ -2,12 +2,20 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Rock paper scissors</title>
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
-    console.log("Hello, World!")
+    function computerPlay() {
+        let sel = Math.floor(Math.random()*3);
+        if(sel == 0) {
+          return 'Rock';
+        } else if(sel == 1) {
+          return 'Paper';
+        } else {
+          return 'Scissors';
+        }
+    }
   </script>
 </body>
 </html>
