@@ -44,8 +44,8 @@
 
     function game() {
       console.log("Welcom to rock paper scissors.")
-      score_comp = 0
-      score_human = 0
+      let score_comp = 0
+      let score_human = 0
       let comp_sel = computerPlay()
       let human_sel = prompt("Select rock, paper, or scissors")
       let game_result = playRound(human_sel, comp_sel)
