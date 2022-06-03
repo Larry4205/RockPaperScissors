@@ -44,9 +44,18 @@
 
     function game() {
       console.log("Welcom to rock paper scissors.")
+      score_comp = 0
+      score_human = 0
       let comp_sel = computerPlay()
       let human_sel = prompt("Select rock, paper, or scissors")
-      console.log(playRound(human_sel, comp_sel))
+      let game_result = playRound(human_sel, comp_sel)
+      if(game_result.substring(0, 5) === 'You l') {
+        score_comp += 1
+      } else if(game_result.substring(0, 5) === 'You w') {
+        score_human += 1
+      }
+      console.log(game_result)
+      console.log(`The current score is ${score_human} human ${score_comp} computer`)
     }
   </script>
 </body>
