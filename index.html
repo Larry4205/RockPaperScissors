@@ -18,13 +18,17 @@
     }
     function playRound(human, computer) {
       human = human.toLowerCase();
-      if(human == "rock" && computer == "rock") {
-        return "Tie";
-      } else {
-        return "Error--invalid input";  //Catch-all for invalid input
-        //Will implement logic next but keep error statement at end
+      if(human === 'rock' && computer === 'rock') {
+        return "Tie!"
+      } else if(human === 'rock' && computer === 'paper') {
+        return 'You lose!  Paper beats rock.'
+      } else if(human === 'rock' && computer === 'scissors') {
+        return 'You win!  Rock beats scissors'
       }
 
+      //TODO:  Add default error statement back in (adding at first makes things
+      //hard to keep track of)
+      return human;
     }
   </script>
 </body>
