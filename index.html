@@ -16,6 +16,7 @@
           return 'scissors';
         }
     }
+
     function playRound(human, computer) {
       human = human.toLowerCase();
       if(human === 'rock' && computer === 'rock') {
@@ -39,6 +40,13 @@
       } else {
         return 'Flagrant error!  Invalid input.'
       }
+    }
+
+    function game() {
+      console.log("Welcom to rock paper scissors.")
+      let comp_sel = computerPlay()
+      let human_sel = prompt("Select rock, paper, or scissors")
+      console.log(playRound(human_sel, comp_sel))
     }
   </script>
 </body>
