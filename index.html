@@ -24,6 +24,12 @@
         return 'You lose!  Paper beats rock.'
       } else if(human === 'rock' && computer === 'scissors') {
         return 'You win!  Rock beats scissors'
+      } else if(human === 'paper' && computer === 'rock') {
+        return 'You win!  Paper beats rock'
+      } else if(human === 'paper' && computer === 'paper') {
+        return 'Tie!'
+      } else if(human === 'paper' && computer === 'scissors') {
+        return 'You lose!  Scissors beats paper.'
       }
 
       //TODO:  Add default error statement back in (adding at first makes things
