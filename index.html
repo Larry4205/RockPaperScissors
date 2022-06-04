@@ -89,6 +89,7 @@
         console.log('Tie game!')
       }
     }
+
   const selButtons = document.querySelectorAll('.selbutton');
   selButtons.forEach(function(selbutton) {
     selbutton.addEventListener('click', () => {
@@ -108,6 +109,16 @@
         humanScore.textContent = currHumanScore.toString();
       }
     });
+  });
+
+  const resetButton = document.querySelector('.reset');
+  resetButton.addEventListener('click', function(e) {
+    const humanScore = document.querySelector('.humanscore');
+    const compScore = document.querySelector('.computerscore');
+    humanScore.textContent = '0';
+    compScore.textContent = '0';
+    const statusBar = document.querySelector('.gamestatus');
+    statusBar.textContent = "Select a move to begin the game.";
   });
 
   </script>
