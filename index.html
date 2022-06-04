@@ -20,14 +20,15 @@
   </div>
   <h3 class = "gamestatus">Select a move to begin the game.</h3>
   <div class = "gamebuttons">
-    <div class = "rock selbutton">Rock</div>
-    <div class = "paper selbutton">Paper</div>
-    <div class = "scissors selbutton">Scissors</div>
+    <div id = "rock" class = "selbutton">Rock</div>
+    <div id = "paper" class = "selbutton">Paper</div>
+    <div id = "scissors" class = "selbutton">Scissors</div>
   </div>
   <h3 class = "gameoutcome">Displays game outcome</h3>
   <button class = "reset">Play again</button>
 
   <script>
+
     function computerPlay() {
         let sel = Math.floor(Math.random()*3);
         if(sel == 0) {
@@ -88,6 +89,13 @@
         console.log('Tie game!')
       }
     }
+  const selButtons = document.querySelectorAll('.selbutton');
+  selButtons.forEach(function(selbutton) {
+    selbutton.addEventListener('click', () => {
+      console.log(selbutton.id);
+    });
+  });
+
   </script>
 </body>
 </html>
