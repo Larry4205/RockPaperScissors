@@ -94,6 +94,7 @@
     const humanScore = document.querySelector('.humanscore');
     const compScore = document.querySelector('.computerscore');
     const gameOutcome = document.querySelector('.gameoutcome');
+    const resButton = document.querySelector('.reset');
     let currHumanScore = parseInt(humanScore.textContent);
     let currCompScore = parseInt(compScore.textContent);
     if(currHumanScore > currCompScore) {
@@ -101,6 +102,8 @@
     } else {
       gameOutcome.textContent = "Sorry, you lost to your computer!"
     }
+    gameOutcome.style.display = "block";
+    resButton.style.display = "block";
   }
 
   const selButtons = document.querySelectorAll('.selbutton');
@@ -135,10 +138,13 @@
   resetButton.addEventListener('click', function(e) {
     const humanScore = document.querySelector('.humanscore');
     const compScore = document.querySelector('.computerscore');
+    const gameOutcome = document.querySelector('.gameoutcome');
     humanScore.textContent = '0';
     compScore.textContent = '0';
     const statusBar = document.querySelector('.gamestatus');
     statusBar.textContent = "Select a move to begin the game.";
+    gameOutcome.style.display = "none";
+    resetButton.style.display = "none";
   });
 
   </script>
