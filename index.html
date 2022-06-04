@@ -2,9 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <link rel = "stylesheet" href="style.css">
   <title>Rock paper scissors</title>
 </head>
 <body>
+  <h1>Rock paper scissors</h1>
+  <div class = "scores">
+    <div class = "scorecard">
+      <h3 class = "human-score">0</h3>
+      <p>Human</p>
+    </div>
+    <div class = "scorecard">
+      <h3 class = "computer-score">0</h3>
+      <p>Computer</p>
+    </div>
+  </div>
   <script>
     function computerPlay() {
         let sel = Math.floor(Math.random()*3);
