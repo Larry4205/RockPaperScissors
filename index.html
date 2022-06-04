@@ -7,16 +7,26 @@
 </head>
 <body>
   <h1>Rock paper scissors</h1>
-  <div class = "scores">
+  <div class = "scorewrap">
     <div class = "scorecard">
-      <h3 class = "human-score">0</h3>
-      <p>Human</p>
+      <h2 class = "humanscore">0</h2>
+      <p>Human</p> 
     </div>
     <div class = "scorecard">
-      <h3 class = "computer-score">0</h3>
+      <h2 class = "computerscore">0</h2>
       <p>Computer</p>
+      </h2>
     </div>
   </div>
+  <h3 class = "gamestatus">Select a move to begin the game.</h3>
+  <div class = "gamebuttons">
+    <div class = "rock selbutton">Rock</div>
+    <div class = "paper selbutton">Paper</div>
+    <div class = "scissors selbutton">Scissors</div>
+  </div>
+  <h3 class = "gameoutcome">Displays game outcome</h3>
+  <button class = "reset">Play again</button>
+
   <script>
     function computerPlay() {
         let sel = Math.floor(Math.random()*3);
