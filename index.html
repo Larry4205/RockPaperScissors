@@ -92,7 +92,10 @@
   const selButtons = document.querySelectorAll('.selbutton');
   selButtons.forEach(function(selbutton) {
     selbutton.addEventListener('click', () => {
-      console.log(selbutton.id);
+      let computerSelection = computerPlay();
+      let roundResult = playRound(selbutton.id, computerSelection);
+      const statusBar = document.querySelector('.gamestatus');
+      statusBar.textContent = roundResult;
     });
   });
 
