@@ -96,6 +96,17 @@
       let roundResult = playRound(selbutton.id, computerSelection);
       const statusBar = document.querySelector('.gamestatus');
       statusBar.textContent = roundResult;
+      const humanScore = document.querySelector('.humanscore');
+      const compScore = document.querySelector('.computerscore');
+      let currHumanScore = parseInt(humanScore.textContent);
+      let currCompScore = parseInt(compScore.textContent);
+      if(roundResult.substring(0, 5) === 'You l'){
+        currCompScore += 1;
+        compScore.textContent = currCompScore.toString();
+      } else if (roundResult.substring(0, 5) === 'You w') {
+        currHumanScore += 1;
+        humanScore.textContent = currHumanScore.toString();
+      }
     });
   });
 
